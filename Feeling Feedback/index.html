@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Feeling Feedback</title>
+    <script>
+        function delay (URL) {
+        setTimeout( function() { window.location = URL }, 1000 );
+        }
+    </script>
 </head>
 <body>
+    
+    <div id="title">
+        <h1>How are you feeling today?</h1>
+    </div>
     <div id="holder">
-        <a href="./perfect">
-            <img src="./media/Heart.svg" alt="">
+        <a href="javascript:delay('./perfect')">
+            <img id="perfect" src="./media/perfect.png" alt="">
         </a>
-        <a href="./ok">
-            <img src="./media/check.svg" alt="">
+        <a href="javascript:delay('./ok')">
+            <img id="ok" src="./media/ok.png" alt="">
         </a>
-        <a href="./nietOK">
-            <img src="./media/error.svg" alt="">
+        <a href="javascript:delay('./nietOK')">
+            <img id="niet-ok" src="./media/nietOk.png" alt="">
         </a>
     </div>
 </body>
