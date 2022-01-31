@@ -6,13 +6,42 @@ h1, p, div {
     color: #6dc069;
 }
 
+h1 {
+    font-size: 50px;
+}
+
+#title {
+    margin-top: 8%;
+}
+
+#feelingTitle{
+    margin-top: 5%;
+}
+
+#spreuk {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
 #holder {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+#perfect:hover {
+    content: url(../media/perfect-pushed.png);
+}
+
+#ok:hover {
+    content: url(../media/ok-pushed.png);
+}
+
+#niet-ok:hover {
+    content: url(../media/nietOk-pushed.png);
 }
 
 a {
@@ -26,3 +55,4 @@ img {
 #refresh p {
     display: inline;
 }
+
