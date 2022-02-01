@@ -1,17 +1,5 @@
 let timeout = 8;
 
-let timer = setTimeout(function() {
-    window.location='../'
-}, ((timeout) *1000)  );
-
-let x = setInterval(function() {
-    document.getElementById("seconden").innerHTML = timeout-1;
-    timeout--
-}, 1000)
-
-
-//Perfect:
-
 var perfectSpreuken = [
     '"Een glimlach geven kost niets. Een glimlach krijgen kan een groot verschil maken."', 
     '"Alles waar je ogen van gaan stralen, moet je doen."',
@@ -62,10 +50,15 @@ var okSpreuk = okSpreuken[Math.floor(Math.random()*okSpreuken.length)];
 var nietOkSpreuk = nietOkSpreuken[Math.floor(Math.random()*nietOkSpreuken.length)];
 
 function perfectText() {
+    document.getElementById("seconden").innerHTML = timeout;
     document.getElementById("spreuk").innerHTML = perfectSpreuk;
 };
 
 function okText() {
+    if(nietOkSpreuk == nietOkSpreuken[13]) {
+        timeout = 11;
+    }
+    document.getElementById("seconden").innerHTML = timeout;
     document.getElementById("spreuk").innerHTML = okSpreuk;
 };
 
@@ -73,5 +66,24 @@ function nietOkText() {
     if(nietOkSpreuk == nietOkSpreuken[6]) {
         timeout = 11;
     }
+    if(nietOkSpreuk == nietOkSpreuken[8]) {
+        timeout = 9;
+    }
+    if(nietOkSpreuk == nietOkSpreuken[11]) {
+        timeout = 11;
+    }
+    document.getElementById("seconden").innerHTML = timeout;
     document.getElementById("spreuk").innerHTML = nietOkSpreuk;
+    out();
 };
+
+function out(){
+    let timer = setTimeout(function() {
+        window.location='../'
+    }, ((timeout) *1000)  );
+}
+
+let x = setInterval(function() {
+    document.getElementById("seconden").innerHTML = timeout-1;
+    timeout--
+}, 1000)
