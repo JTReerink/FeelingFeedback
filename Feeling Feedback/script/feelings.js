@@ -52,6 +52,7 @@ var nietOkSpreuk = nietOkSpreuken[Math.floor(Math.random()*nietOkSpreuken.length
 function perfectText() {
     document.getElementById("seconden").innerHTML = timeout;
     document.getElementById("spreuk").innerHTML = perfectSpreuk;
+    out();
 };
 
 function okText() {
@@ -60,6 +61,7 @@ function okText() {
     }
     document.getElementById("seconden").innerHTML = timeout;
     document.getElementById("spreuk").innerHTML = okSpreuk;
+    out();
 };
 
 function nietOkText() {
